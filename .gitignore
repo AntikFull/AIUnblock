@@ -1,0 +1,23 @@
+*.iml
+.gradle/
+.kotlin/
+.idea/
+local.properties
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Ключи подписи и локальные секреты
+*.jks
+*.keystore
+signing.properties
+SIGNING.local.md
+**/.git-backup
+**/.git-backup/
+
+# Сборочные артефакты и локальные журналы
+*.apk
+*.aab
+*.idsig
+*.log
