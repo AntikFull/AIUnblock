@@ -153,6 +153,26 @@ $env:JAVA_HOME="C:\Program Files\Android\Android Studio\jbr"
 - release-сборка;
 - установка debug APK на подключённое Android-устройство при наличии телефона.
 
+## Автоматическая публикация APK на GitHub
+
+Workflow `.github/workflows/release-apk.yml` запускается:
+
+- автоматически после каждого `push` в ветку `main`;
+- вручную через вкладку **Actions** → **Публикация подписанного APK** →
+  **Run workflow**.
+
+Workflow выполняет unit-тесты, release-сборку, подпись APK и создаёт GitHub
+Release с тегом вида `v0.1.6-build-номер`.
+
+В настройках репозитория должны быть созданы Secrets:
+
+- `RELEASE_KEYSTORE_BASE64` — JKS в формате Base64;
+- `RELEASE_KEYSTORE_PASSWORD` — пароль хранилища;
+- `RELEASE_KEY_ALIAS` — алиас ключа;
+- `RELEASE_KEY_PASSWORD` — пароль ключа.
+
+Секреты не попадают в коммиты и не выводятся в логи Actions.
+
 ## Ограничения
 
 - Android допускает только один активный VPN;
