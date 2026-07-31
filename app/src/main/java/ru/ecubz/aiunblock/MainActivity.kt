@@ -45,7 +45,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -198,7 +197,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AiUnblockScreen(
     state: TunnelState,
@@ -473,7 +472,6 @@ private fun StatusText(state: TunnelState) {
     }
 }
 
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun PowerButton(
     enabled: Boolean,
@@ -500,10 +498,7 @@ private fun PowerButton(
     Button(
         onClick = onClick,
         enabled = !busy,
-        shapes = ButtonDefaults.shapes(
-            shape = RoundedCornerShape(64.dp),
-            pressedShape = RoundedCornerShape(36.dp),
-        ),
+        shape = RoundedCornerShape(64.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = containerColor,
             contentColor = contentColor,

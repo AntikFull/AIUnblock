@@ -100,7 +100,7 @@ IPv6-запрос `AAAA` для такой записи получает пус�
 ## Технологии и требования
 
 - Kotlin 2.3.10;
-- Jetpack Compose и Material 3;
+- Jetpack Compose 1.9.0 и Material 3 1.4.0;
 - Android Gradle Plugin 9.1.1;
 - Gradle 9.3.1;
 - Java 17 или новее;
