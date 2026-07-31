@@ -55,7 +55,7 @@ jobs:
           test -n "$KEYSTORE_PASSWORD"
           test -n "$KEY_ALIAS"
           test -n "$KEY_PASSWORD"
-          printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release-key.jks"
+          printf '%s' "$KEYSTORE_BASE64" | tr -d '[:space:]' | base64 --decode > "$RUNNER_TEMP/release-key.jks"
           unsigned="app/build/outputs/apk/release/ru.ecubz.aiunblock-7-0.1.6-release-unsigned.apk"
           signed="app/build/outputs/apk/release/$APK_NAME"
           "$ANDROID_HOME/build-tools/37.0.0/apksigner" sign \
