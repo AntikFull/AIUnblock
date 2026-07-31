@@ -104,7 +104,7 @@ IPv6-запрос `AAAA` для такой записи получает пус�
 - Android Gradle Plugin 9.1.1;
 - Gradle 9.3.1;
 - Java 17 или новее;
-- `compileSdk 37`;
+- `compileSdk 36`;
 - `targetSdk 36`;
 - `minSdk 26`;
 - native `hev-socks5-tunnel`;

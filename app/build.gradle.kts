@@ -11,7 +11,7 @@ android {
         archivesName = "ru.ecubz.aiunblock-7-0.1.6"
     }
     compileSdk {
-        version = release(37) {
+        version = release(36) {
             minorApiLevel = 0
         }
     }
